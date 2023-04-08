@@ -2,9 +2,18 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 const Hero = () => {
+  const src = '/images/hero-img';
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
+        <picture>
+            <source type='image/jpg' srcSet={
+                `${src}.jpg 1x,
+                ${src}@2x.jpg 2x,
+                ${src}@3x.jpg 3x`
+            }
+            />
+            <HeroImage src={`${src}.jpg`}/>
+        </picture>
       <Swoop src="/swoop.svg" />
     </Wrapper>
   );
