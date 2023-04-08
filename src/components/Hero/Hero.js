@@ -12,9 +12,9 @@ const Hero = () => {
                 ${src}@3x.jpg 3x`
             }
             />
-            <HeroImage src={`${src}.jpg`}/>
+            <HeroImage src={`${src}.jpg`} alt="Hero image"/>
         </picture>
-      <Swoop src="/swoop.svg" />
+      <Swoop src="/swoop.svg" alt=""/>
     </Wrapper>
   );
 };
